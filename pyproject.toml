@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sievegate"
+version = "0.1.0"
+description = "Pre-flight screening and model-tier routing for outbound AI/LLM API calls."
+authors = [{ name = "Ranjeet Reddy Manchana" }]
+requires-python = ">=3.10"
+# The public edition has no runtime dependencies: the gate, the pre-filter,
+# the policy and the replay demo use only the standard library.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+# Only for the local demo (demo/run_demo.py); the library never imports it.
+demo = ["rich>=13"]
+
+# Source lives in src/ but installs as the "sievegate" package.
+[tool.setuptools]
+packages = ["sievegate"]
+
+[tool.setuptools.package-dir]
+sievegate = "src"

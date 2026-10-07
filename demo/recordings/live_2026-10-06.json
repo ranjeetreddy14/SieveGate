@@ -1,0 +1,621 @@
+{
+  "format": 1,
+  "source": "live",
+  "recorded_on": "2026-10-06",
+  "sdk": "typesafe-sdk 0.7.1",
+  "model": "jev-latest (SDK default)",
+  "policy": "EnforcementPolicy() defaults",
+  "gate_timeout_seconds": 5.0,
+  "note": "Classifier answers only. No payload text: each scene is matched by a SHA-256 fingerprint of its payload.",
+  "scenes": {
+    "plain_question": {
+      "payload_sha256": "df2b19a58f03fc4c1355c489d8fd39481a5a57e7af15bbce898020f652ebf4f0",
+      "latency_ms": 334.5,
+      "result": {
+        "verdict": {
+          "contains_pii": false,
+          "data_leak_risk": 0.05,
+          "pii_probability": 0.09,
+          "secret_probability": 0.05,
+          "financial_probability": 0.11,
+          "leak_risk_confidence": 0.83,
+          "category_confidence": 1.0,
+          "contains_secret": false,
+          "contains_financial": false,
+          "payload_type": "text",
+          "content_category": "general_text"
+        },
+        "routing": {
+          "tier": "small",
+          "reason": "typesafe jev: small (confidence 0.70)"
+        },
+        "judgments": {
+          "contains_pii": {
+            "value": 0.09,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_secret": {
+            "value": 0.05,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_financial": {
+            "value": 0.11,
+            "confidence": null,
+            "probabilities": null
+          },
+          "data_leak_risk": {
+            "value": 0.2,
+            "confidence": 0.83,
+            "probabilities": {
+              "0": 0.8,
+              "1": 0.2,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0
+            }
+          },
+          "content_category": {
+            "value": "general_text",
+            "confidence": 1.0,
+            "probabilities": {
+              "customer_pii": 0.0,
+              "source_code": 0.0,
+              "credentials": 0.0,
+              "employee_hr": 0.0,
+              "legal_contract": 0.0,
+              "financial_records": 0.0,
+              "general_text": 1.0,
+              "health_records": 0.0,
+              "strategy_confidential": 0.0,
+              "infrastructure_security": 0.0
+            }
+          },
+          "model_tier": {
+            "value": "small",
+            "confidence": 0.7,
+            "probabilities": {
+              "large": 0.0,
+              "small": 0.8,
+              "medium": 0.2
+            }
+          }
+        }
+      }
+    },
+    "hard_reasoning": {
+      "payload_sha256": "e4b6b5e9a5162face5dec715518767c65263554cf58f09dd1e2047e9937a4b15",
+      "latency_ms": 109.9,
+      "result": {
+        "verdict": {
+          "contains_pii": false,
+          "data_leak_risk": 0.085,
+          "pii_probability": 0.03,
+          "secret_probability": 0.02,
+          "financial_probability": 0.07,
+          "leak_risk_confidence": 0.71,
+          "category_confidence": 0.99,
+          "contains_secret": false,
+          "contains_financial": false,
+          "payload_type": "text",
+          "content_category": "general_text"
+        },
+        "routing": {
+          "tier": "medium",
+          "reason": "typesafe jev: medium (confidence 0.74)"
+        },
+        "judgments": {
+          "contains_pii": {
+            "value": 0.03,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_secret": {
+            "value": 0.02,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_financial": {
+            "value": 0.07,
+            "confidence": null,
+            "probabilities": null
+          },
+          "data_leak_risk": {
+            "value": 0.34,
+            "confidence": 0.71,
+            "probabilities": {
+              "0": 0.68,
+              "1": 0.31,
+              "2": 0.01,
+              "3": 0.0,
+              "4": 0.0
+            }
+          },
+          "content_category": {
+            "value": "general_text",
+            "confidence": 0.99,
+            "probabilities": {
+              "health_records": 0.0,
+              "legal_contract": 0.0,
+              "strategy_confidential": 0.01,
+              "employee_hr": 0.0,
+              "infrastructure_security": 0.0,
+              "source_code": 0.0,
+              "credentials": 0.0,
+              "general_text": 0.99,
+              "customer_pii": 0.0,
+              "financial_records": 0.0
+            }
+          },
+          "model_tier": {
+            "value": "medium",
+            "confidence": 0.74,
+            "probabilities": {
+              "large": 0.15,
+              "medium": 0.83,
+              "small": 0.02
+            }
+          }
+        }
+      }
+    },
+    "code_review": {
+      "payload_sha256": "8132e9a4bb700bd669e3f308addf029c5d8410c9138ceb91d16dff3c5b1119cf",
+      "latency_ms": 167.1,
+      "result": {
+        "verdict": {
+          "contains_pii": false,
+          "data_leak_risk": 0.08,
+          "pii_probability": 0.07,
+          "secret_probability": 0.02,
+          "financial_probability": 0.05,
+          "leak_risk_confidence": 0.74,
+          "category_confidence": 1.0,
+          "contains_secret": false,
+          "contains_financial": false,
+          "payload_type": "text",
+          "content_category": "source_code"
+        },
+        "routing": {
+          "tier": "small",
+          "reason": "typesafe jev: small (confidence 0.93)"
+        },
+        "judgments": {
+          "contains_pii": {
+            "value": 0.07,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_secret": {
+            "value": 0.02,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_financial": {
+            "value": 0.05,
+            "confidence": null,
+            "probabilities": null
+          },
+          "data_leak_risk": {
+            "value": 0.32,
+            "confidence": 0.74,
+            "probabilities": {
+              "0": 0.69,
+              "1": 0.3,
+              "2": 0.01,
+              "3": 0.0,
+              "4": 0.0
+            }
+          },
+          "content_category": {
+            "value": "source_code",
+            "confidence": 1.0,
+            "probabilities": {
+              "customer_pii": 0.0,
+              "general_text": 0.0,
+              "source_code": 1.0,
+              "infrastructure_security": 0.0,
+              "financial_records": 0.0,
+              "employee_hr": 0.0,
+              "health_records": 0.0,
+              "legal_contract": 0.0,
+              "credentials": 0.0,
+              "strategy_confidential": 0.0
+            }
+          },
+          "model_tier": {
+            "value": "small",
+            "confidence": 0.93,
+            "probabilities": {
+              "small": 0.96,
+              "medium": 0.04,
+              "large": 0.0
+            }
+          }
+        }
+      }
+    },
+    "patient_note": {
+      "payload_sha256": "dee6a98a433b4e647d753f545ff58c933e356da3b61cfbb2d503a190ddfc5d3c",
+      "latency_ms": 96.2,
+      "result": {
+        "verdict": {
+          "contains_pii": true,
+          "data_leak_risk": 0.5875,
+          "pii_probability": 0.98,
+          "secret_probability": 0.01,
+          "financial_probability": 0.02,
+          "leak_risk_confidence": 0.36,
+          "category_confidence": 1.0,
+          "contains_secret": false,
+          "contains_financial": false,
+          "payload_type": "text",
+          "content_category": "health_records"
+        },
+        "routing": {
+          "tier": "small",
+          "reason": "typesafe jev: small (confidence 0.94)"
+        },
+        "judgments": {
+          "contains_pii": {
+            "value": 0.98,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_secret": {
+            "value": 0.01,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_financial": {
+            "value": 0.02,
+            "confidence": null,
+            "probabilities": null
+          },
+          "data_leak_risk": {
+            "value": 2.35,
+            "confidence": 0.36,
+            "probabilities": {
+              "0": 0.02,
+              "1": 0.19,
+              "2": 0.27,
+              "3": 0.46,
+              "4": 0.06
+            }
+          },
+          "content_category": {
+            "value": "health_records",
+            "confidence": 1.0,
+            "probabilities": {
+              "infrastructure_security": 0.0,
+              "legal_contract": 0.0,
+              "financial_records": 0.0,
+              "health_records": 1.0,
+              "employee_hr": 0.0,
+              "general_text": 0.0,
+              "credentials": 0.0,
+              "source_code": 0.0,
+              "customer_pii": 0.0,
+              "strategy_confidential": 0.0
+            }
+          },
+          "model_tier": {
+            "value": "small",
+            "confidence": 0.94,
+            "probabilities": {
+              "large": 0.0,
+              "small": 0.96,
+              "medium": 0.04
+            }
+          }
+        }
+      }
+    },
+    "performance_review": {
+      "payload_sha256": "c46e0f267e3dade3eaef32888e032c4ddd83345cb718e53ec762e11f21d6775a",
+      "latency_ms": 108.6,
+      "result": {
+        "verdict": {
+          "contains_pii": true,
+          "data_leak_risk": 0.6,
+          "pii_probability": 0.98,
+          "secret_probability": 0.01,
+          "financial_probability": 0.03,
+          "leak_risk_confidence": 0.44,
+          "category_confidence": 1.0,
+          "contains_secret": false,
+          "contains_financial": false,
+          "payload_type": "text",
+          "content_category": "employee_hr"
+        },
+        "routing": {
+          "tier": "small",
+          "reason": "typesafe jev: small (confidence 0.41)"
+        },
+        "judgments": {
+          "contains_pii": {
+            "value": 0.98,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_secret": {
+            "value": 0.01,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_financial": {
+            "value": 0.03,
+            "confidence": null,
+            "probabilities": null
+          },
+          "data_leak_risk": {
+            "value": 2.4,
+            "confidence": 0.44,
+            "probabilities": {
+              "0": 0.01,
+              "1": 0.16,
+              "2": 0.29,
+              "3": 0.5,
+              "4": 0.04
+            }
+          },
+          "content_category": {
+            "value": "employee_hr",
+            "confidence": 1.0,
+            "probabilities": {
+              "customer_pii": 0.0,
+              "source_code": 0.0,
+              "credentials": 0.0,
+              "employee_hr": 1.0,
+              "legal_contract": 0.0,
+              "infrastructure_security": 0.0,
+              "health_records": 0.0,
+              "general_text": 0.0,
+              "strategy_confidential": 0.0,
+              "financial_records": 0.0
+            }
+          },
+          "model_tier": {
+            "value": "small",
+            "confidence": 0.41,
+            "probabilities": {
+              "large": 0.04,
+              "small": 0.6,
+              "medium": 0.36
+            }
+          }
+        }
+      }
+    },
+    "base64_secret": {
+      "payload_sha256": "62d67fcb731bc4dd5b4cbf82cbdef16a281efb7f468b24ff5002bf69fa1208ad",
+      "latency_ms": 128.3,
+      "result": {
+        "verdict": {
+          "contains_pii": false,
+          "data_leak_risk": 0.88,
+          "pii_probability": 0.06,
+          "secret_probability": 0.9,
+          "financial_probability": 0.15,
+          "leak_risk_confidence": 0.6,
+          "category_confidence": 0.95,
+          "contains_secret": true,
+          "contains_financial": false,
+          "payload_type": "text",
+          "content_category": "credentials"
+        },
+        "routing": {
+          "tier": "small",
+          "reason": "typesafe jev: small (confidence 0.99)"
+        },
+        "judgments": {
+          "contains_pii": {
+            "value": 0.06,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_secret": {
+            "value": 0.9,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_financial": {
+            "value": 0.15,
+            "confidence": null,
+            "probabilities": null
+          },
+          "data_leak_risk": {
+            "value": 3.52,
+            "confidence": 0.6,
+            "probabilities": {
+              "0": 0.01,
+              "1": 0.02,
+              "2": 0.03,
+              "3": 0.31,
+              "4": 0.63
+            }
+          },
+          "content_category": {
+            "value": "credentials",
+            "confidence": 0.95,
+            "probabilities": {
+              "health_records": 0.0,
+              "legal_contract": 0.0,
+              "financial_records": 0.0,
+              "employee_hr": 0.0,
+              "infrastructure_security": 0.0,
+              "source_code": 0.02,
+              "credentials": 0.96,
+              "general_text": 0.02,
+              "customer_pii": 0.0,
+              "strategy_confidential": 0.0
+            }
+          },
+          "model_tier": {
+            "value": "small",
+            "confidence": 0.99,
+            "probabilities": {
+              "large": 0.0,
+              "medium": 0.0,
+              "small": 1.0
+            }
+          }
+        }
+      }
+    },
+    "budget_question": {
+      "payload_sha256": "e6a8eeab6712190992c4b076c57798eec689fca21ac3ec94f9e2e8ef56737f1f",
+      "latency_ms": 113.6,
+      "result": {
+        "verdict": {
+          "contains_pii": false,
+          "data_leak_risk": 0.19,
+          "pii_probability": 0.03,
+          "secret_probability": 0.02,
+          "financial_probability": 0.09,
+          "leak_risk_confidence": 0.66,
+          "category_confidence": 0.56,
+          "contains_secret": false,
+          "contains_financial": false,
+          "payload_type": "text",
+          "content_category": "general_text"
+        },
+        "routing": {
+          "tier": "medium",
+          "reason": "typesafe jev: medium (confidence 0.70)"
+        },
+        "judgments": {
+          "contains_pii": {
+            "value": 0.03,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_secret": {
+            "value": 0.02,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_financial": {
+            "value": 0.09,
+            "confidence": null,
+            "probabilities": null
+          },
+          "data_leak_risk": {
+            "value": 0.76,
+            "confidence": 0.66,
+            "probabilities": {
+              "0": 0.32,
+              "1": 0.61,
+              "2": 0.06,
+              "3": 0.01,
+              "4": 0.0
+            }
+          },
+          "content_category": {
+            "value": "general_text",
+            "confidence": 0.56,
+            "probabilities": {
+              "employee_hr": 0.0,
+              "customer_pii": 0.0,
+              "infrastructure_security": 0.0,
+              "source_code": 0.0,
+              "health_records": 0.0,
+              "general_text": 0.6,
+              "credentials": 0.0,
+              "strategy_confidential": 0.1,
+              "financial_records": 0.3,
+              "legal_contract": 0.0
+            }
+          },
+          "model_tier": {
+            "value": "medium",
+            "confidence": 0.7,
+            "probabilities": {
+              "small": 0.19,
+              "medium": 0.81,
+              "large": 0.0
+            }
+          }
+        }
+      }
+    },
+    "placeholder_ssn_fixture": {
+      "payload_sha256": "d1a72ee0bda87009f5cb1897f76276522cc3a98077c9617eeedbb0b6c6e8346d",
+      "latency_ms": 212.1,
+      "result": {
+        "verdict": {
+          "contains_pii": false,
+          "data_leak_risk": 0.14,
+          "pii_probability": 0.08,
+          "secret_probability": 0.05,
+          "financial_probability": 0.09,
+          "leak_risk_confidence": 0.53,
+          "category_confidence": 0.64,
+          "contains_secret": false,
+          "contains_financial": false,
+          "payload_type": "text",
+          "content_category": "customer_pii"
+        },
+        "routing": {
+          "tier": "small",
+          "reason": "typesafe jev: small (confidence 0.47)"
+        },
+        "judgments": {
+          "contains_pii": {
+            "value": 0.08,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_secret": {
+            "value": 0.05,
+            "confidence": null,
+            "probabilities": null
+          },
+          "contains_financial": {
+            "value": 0.09,
+            "confidence": null,
+            "probabilities": null
+          },
+          "data_leak_risk": {
+            "value": 0.56,
+            "confidence": 0.53,
+            "probabilities": {
+              "0": 0.49,
+              "1": 0.46,
+              "2": 0.04,
+              "3": 0.01,
+              "4": 0.0
+            }
+          },
+          "content_category": {
+            "value": "customer_pii",
+            "confidence": 0.64,
+            "probabilities": {
+              "infrastructure_security": 0.0,
+              "health_records": 0.0,
+              "financial_records": 0.0,
+              "employee_hr": 0.0,
+              "legal_contract": 0.0,
+              "source_code": 0.32,
+              "credentials": 0.0,
+              "general_text": 0.01,
+              "customer_pii": 0.67,
+              "strategy_confidential": 0.0
+            }
+          },
+          "model_tier": {
+            "value": "small",
+            "confidence": 0.47,
+            "probabilities": {
+              "medium": 0.34,
+              "small": 0.65,
+              "large": 0.01
+            }
+          }
+        }
+      },
+      "note": "Re-recorded 2026-10-06 (one live call) after the scene's text was rewritten."
+    }
+  }
+}
